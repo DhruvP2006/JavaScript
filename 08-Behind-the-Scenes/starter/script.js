@@ -139,21 +139,47 @@
 
 // Object references in Practice (Shallow v/s. Deep Copies)
 
-const jessica = {
-  firstName: 'Jessica',
-  lastName: 'Williams',
-  age: 27,
-};
+// const jessica1 = {
+//   firstName: 'Jessica',
+//   lastName: 'Williams',
+//   age: 27,
+// };
 
-function marriedPerson(originalPerson, newLastName) {
-  originalPerson.lastName = newLastName;
-  return originalPerson;
-}
+// function marriedPerson(originalPerson, newLastName) {
+//   originalPerson.lastName = newLastName;
+//   return originalPerson;
+// }
 
-const marriedJessica = marriedPerson(jessica, 'Davis');
+// const marriedJessica = marriedPerson(jessica1, 'Davis');
 
-// const marriedJessica = jessica;
-// marriedJessica.lastName = 'Daivs';
+// // const marriedJessica = jessica;
+// // marriedJessica.lastName = 'Daivs';
 
-console.log('Before: ', jessica);
-console.log('After: ', marriedJessica);
+// console.log('Before: ', jessica1);
+// console.log('After: ', marriedJessica);
+
+// const jessica = {
+//   firstName: 'Jessica',
+//   lastName: 'Williams',
+//   age: 27,
+//   family: ['Alice', 'Bob'],
+// };
+
+// // Shallow copy
+// const jessicaCopy = { ...jessica };
+// jessicaCopy.lastName = 'Davis';
+
+// // jessicaCopy.family.push('Mary');
+// // jessicaCopy.family.push('John');
+
+// // console.log('Before: ', jessica);
+// // console.log('After: ', jessicaCopy);
+
+// //Deep copy/clone
+// const jessicaClone = structuredClone(jessica);
+
+// jessicaClone.family.push('Mary');
+// jessicaClone.family.push('John');
+
+// console.log('Original: ', jessica);
+// console.log('Clone: ', jessicaClone);
